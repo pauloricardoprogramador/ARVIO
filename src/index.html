@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/672867bcca.js" crossorigin="anonymous"></script>
+    <title>Arvio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Arvio</h1>
+        <i class="fa-brands fa-gg"></i>
+    </header>
+
+    <main>
+        <div class="container-left">
+            <div class="saldo-atual">
+                <h3>Saldo atual</h3>
+                <span id="status"></span>
+            </div>
+            <div class="transacao">
+                <div class="transferencia">
+                    <div class="transferencia-nome">
+                        <h3>Adicione uma transação</h3>
+                    </div>
+                    <div class="transferencia-icone">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="transacao-item">
+                    <label for="nome">Nome</label>
+                    <input type="text" placeholder="Digite o nome da transação" name="nome" id="nome">
+                </div>
+                <div class="transacao-item">
+                    <label for="Tipo">Tipo da transação</label>
+                    <select name="tipo" id="tipo">
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="entrada">Entrada</option>
+                        <option value="saida" >Saida</option>
+                    </select>
+                </div>
+                <div class="transacao-item">
+                    <label for="valor-adicionado">Digite um valor</label>
+                    <input type="number" placeholder="R$ 0,00" name="valor-adicionado" id="valor-adicionado">
+                </div>
+                <button type="submit" onclick="validarTransacao()" class="adicionar-transacao" id="adicionar">Adicionar transação</button>
+            </div>
+
+        </div>
+
+        <div class="container-right">
+            <div class="item-right">
+                <div class="resum-financeiro">
+                    <h3>Faça um filtro</h3>
+                </div>
+                <div class="filtros">
+                    <button id="todos">Todos</button>
+                    <button id="entradas">Entradas</button>
+                    <button id="saidas">Saidas</button>
+                </div>
+            </div>
+
+            <ul id="lista">
+            </ul>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+
+<!-- CREATE BY PAULO RICARDO -->
+
+</html>
